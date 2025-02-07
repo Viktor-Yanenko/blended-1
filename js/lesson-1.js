@@ -8,12 +8,15 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number()
 
-// let number = Number(prompt('Введіть число:'));
+// const number = Number(prompt('Введіть число:'));
 // if (number === 10) {
 //   alert('Вірно');
 // } else {
 //   alert('Не вірно');
 // }
+
+// const number = Number(prompt('Введіть число:'));
+// const result = number === 10 ? alert('Вірно') : alert('Не вірно');
 
 //! TASK 2
 
@@ -81,6 +84,15 @@
 // const minutesFormat = String(minutes).padStart(2, 0);
 // console.log(`${hoursFormat}:${minutesFormat}`);
 
+// const value = Number(prompt('Введіть кількість хвилин'));
+// if (isNaN(value)) {
+//   alert('ERROR!');
+// } else {
+//   const hours = String(Math.floor(value / 60)).padStart(2, 0);
+//   const minutes = String(value % 60).padStart(2, 0);
+//   console.log(`${hours}:${minutes}`);
+// }
+
 //! TASK 5
 
 // Напишіть код, який запитуватиме у користувача
@@ -107,7 +119,6 @@
 // } else {
 //   alert('Я вас не знаю');
 // }
-
 // if (password === 'Я головний') {
 //   alert('Добрий день!');
 // } else {
@@ -153,6 +164,25 @@
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
 // повертати з функції рядок - 'Not a number!'.
 
+// function min(a, b) {
+//   let min;
+//   if (typeof a !== 'number' || typeof b !== 'number') {
+//     min = 'Not a number';
+//   } else {
+//     if (a < b) {
+//       min = `Minimal value is ${a}`;
+//     } else {
+//       min = `Minimal value is ${b}`;
+//     }
+//   }
+//   return min;
+// }
+
+// console.log(min(undefined, 5));
+// console.log(min(5, true));
+// console.log(min(4, 5));
+// console.log(min(12, 5));
+
 //! TASK 9
 
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
@@ -160,9 +190,60 @@
 // В іншому випадку вона запитує підтвердження через confirm
 // і повертає його результат (true/false).
 
+// function isAdult(age) {
+//   let confirmation;
+//   if (age >= 18) {
+//     confirmation = true;
+//   } else {
+//     if (confirm('Підтвердіть свій вік. Вам більше 18 років?') === true) {
+//       confirmation = true;
+//     } else {
+//       confirmation = false;
+//     }
+//   }
+//   return confirmation;
+// }
+
+// console.log(isAdult(17));
+
+//* 9.2
+
+// function isAdult(age) {
+//   let confirmation;
+//   if ((age = prompt('Введіть ваш вік')) >= 18) {
+//     confirmation = true;
+//   } else {
+//     if (confirm('Підтвердіть свій вік. Вам більше 18 років?') === true) {
+//       confirmation = true;
+//     } else {
+//       confirmation = false;
+//     }
+//   }
+//   return confirmation;
+// }
+
+// console.log(isAdult());
+
 //! TASK 10
 
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
 // Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
 // якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
 // якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i <= num; i++) {
+//     if (!(i % 3) && !(i % 5)) {
+//       console.log(`${i} - fizzbuzz`);
+//     } else if (!(i % 3)) {
+//       console.log(`${i} - fizz`);
+//     } else if (!(i % 5)) {
+//       console.log(`${i} - buzz`);
+//     } else {
+//       console.log(`${i} - is not fizz/buzz/fizzbuzz`);
+//     }
+//   }
+// }
+
+// fizzBuzz(15);
+// fizzBuzz(9);
