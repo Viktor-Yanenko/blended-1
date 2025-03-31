@@ -232,45 +232,45 @@
 // Крім того, клас `Employee` має мати метод `getEmployeeDetails()`,
 // який повертає об'єкт з зарплатою співробітника та відділом, в якому він працює.
 
-class Person {
-  constructor(name, age, gender, email) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.email = email;
-  }
-  getDetails() {
-    return {
-      name: this.name,
-      age: this.age,
-      gender: this.gender,
-      email: this.email,
-    };
-  }
-}
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
 
-class Employee extends Person {
-  constructor(name, age, gender, email, salary, department) {
-    super(name, age, gender, email);
-    this.salary = salary;
-    this.department = department;
-  }
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department) {
+//     super(name, age, gender, email);
+//     this.salary = salary;
+//     this.department = department;
+//   }
 
-  getEmployeeDetails() {
-    return {
-      ...this.getDetails(),
-      salary: this.salary,
-      department: this.department,
-    };
-  }
-}
+//   getEmployeeDetails() {
+//     return {
+//       ...this.getDetails(),
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
 
-const viktor = new Employee(
-  'Viktor',
-  24,
-  'male',
-  'viktoryanenko11@gmail.com',
-  430,
-  'sales manager'
-);
-console.log(viktor.getEmployeeDetails());
+// const viktor = new Employee(
+//   'Viktor',
+//   24,
+//   'male',
+//   'viktoryanenko11@gmail.com',
+//   430,
+//   'sales manager'
+// );
+// console.log(viktor.getEmployeeDetails());
